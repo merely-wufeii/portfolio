@@ -1,0 +1,149 @@
+body {
+/*                background: black url(images/bg.png) top left/cover no-repeat;*/
+    background: black url(images/bg.png) top left;
+    background-size: 100%;
+    margin: 5%;
+}
+h1{
+    color:aliceblue;
+    text-align:center;
+}
+h3{
+    color:aliceblue;
+    text-align:center;
+    font-family: "Raleway", sans-serif;
+}
+p{
+    color: white;
+    font-family: "Raleway", sans-serif;
+}
+
+nav{
+    color: white;
+    overflow: auto;
+}
+
+nav > ul {
+    list-style: none;
+    padding: 0px;
+}
+/*            nav > ul > li {*/
+.nav-button {
+    display: inline-block;
+    width: 20%;
+    float: left;
+    font-size: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1em;
+    background-color: rgb(255,255,255,0.4);
+    font-family: "Raleway", sans-serif;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transition-property: all;
+    transition-timing-function: ease;
+    color: white;
+}
+.nav-button:hover{
+    background-color: rgb(255,255,255,0.9);
+    color: black !important;
+}
+
+.nav-button > a{
+    text-decoration: none;
+    color: inherit;
+}
+.nav-dropdown {
+    display: none;
+    margin: 5%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 18%;
+    padding: 1em;
+    top: 3.2em ;
+    width: 18%;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    text-align: center;
+}
+.nav-button:hover .nav-dropdown {
+    display: block;
+    color: black;
+
+}
+.nav-dropdown > a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 0.5em;
+}
+.nav-dropdown > a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+@media only screen and (max-width: 767px){
+    .nav-button{
+        width: 100%;
+    }
+    .nav-button .nav-dropdown {
+        position: relative;
+        left: 0;
+        width: 100%;
+        top: 1em;
+        margin: 0;
+    }
+}
+/*Above is the code I entered listening to to css lectures and below is things I found and learned online*/
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*found how to do an image gallery online, and how to embed images and videos.*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    z-index: -1;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 30%;
+    max-width: 33%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border: 2px solid aliceblue;
+}
+/*I wanted the images to grow bigger when hovering*/
+.column :hover{
+    cursor: pointer;
+    transition: transform .5s;
+    transform: scale(1.3);
+    
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 767px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/*Searched up how to do a footer*/
+.footer {
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    color: white;
+}
